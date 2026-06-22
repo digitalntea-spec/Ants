@@ -17,7 +17,7 @@ export default function Header() {
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 12);
-    window.addEventListener("scroll", onScroll);
+    window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
@@ -48,7 +48,9 @@ export default function Header() {
         </a>
 
         <button
-          aria-label="Abrir menú"
+          aria-label={menuOpen ? "Cerrar menú" : "Abrir menú"}
+          aria-expanded={menuOpen}
+          aria-controls="mobile-menu"
           className="md:hidden text-ants-ink"
           onClick={() => setMenuOpen((open) => !open)}
         >
@@ -59,7 +61,7 @@ export default function Header() {
       </div>
 
       {menuOpen && (
-        <nav className="md:hidden bg-white border-t border-ants-border px-6 py-4 flex flex-col gap-4">
+        <nav id="mobile-menu" className="md:hidden bg-white border-t border-ants-border px-6 py-4 flex flex-col gap-4">
           {LINKS.map((link) => (
             <a
               key={link.href}
