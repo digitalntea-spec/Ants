@@ -12,6 +12,7 @@ export default function Logo({ size = 120, showBadge = true, className = "" }: L
   const wordmark = (
     <div
       className={`relative inline-flex items-center font-graffiti select-none ${className}`}
+      aria-label="ANTS"
       style={{
         fontSize: size * 0.32,
         letterSpacing: 1,
@@ -31,6 +32,7 @@ export default function Logo({ size = 120, showBadge = true, className = "" }: L
       {letters.map((letter, i) => (
         <span
           key={`${letter}-${i}`}
+          aria-hidden
           style={{
             color: LETTER_COLORS[i],
             WebkitTextStroke: `${Math.max(2, size * 0.02)}px #1A1A2E`,
