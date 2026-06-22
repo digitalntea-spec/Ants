@@ -6,6 +6,12 @@ export default function Hero() {
     ? hero.mantra.split(hero.mantraHighlight)
     : [hero.mantra, ""];
 
+  if (process.env.NODE_ENV !== "production" && !hero.mantra.includes(hero.mantraHighlight)) {
+    console.warn(
+      "hero.mantraHighlight debe ser una sub-cadena exacta de hero.mantra (src/data/content.ts), si no el degradé de color no se aplica."
+    );
+  }
+
   return (
     <section className="pt-32 pb-20 px-6 text-center">
       <div className="max-w-3xl mx-auto">
