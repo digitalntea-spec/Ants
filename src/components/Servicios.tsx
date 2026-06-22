@@ -1,4 +1,3 @@
-// src/components/Servicios.tsx
 import { servicios } from "@/data/content";
 
 export default function Servicios() {

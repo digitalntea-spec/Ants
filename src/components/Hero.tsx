@@ -1,4 +1,3 @@
-// src/components/Hero.tsx
 import { hero } from "@/data/content";
 
 export default function Hero() {
