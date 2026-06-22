@@ -2,7 +2,7 @@
 import { hero } from "@/data/content";
 
 export default function Hero() {
-  const [before, after] = hero.mantra.includes(hero.mantraHighlight)
+  const [before] = hero.mantra.includes(hero.mantraHighlight)
     ? hero.mantra.split(hero.mantraHighlight)
     : [hero.mantra, ""];
 
