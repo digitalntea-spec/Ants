@@ -10,7 +10,7 @@ export default function ComoFunciona() {
         <div className="flex flex-col md:flex-row gap-10 md:gap-0">
           {pasos.map((paso, i) => (
             <div key={paso.numero} className="flex-1 relative text-center px-4">
-              <div className="mx-auto w-10 h-10 rounded-full border-2 border-ants-amarillo flex items-center justify-center font-bold text-ants-ink mb-3">
+              <div className="relative z-10 mx-auto w-10 h-10 rounded-full bg-ants-surface border-2 border-ants-amarillo flex items-center justify-center font-bold text-ants-ink mb-3">
                 {paso.numero}
               </div>
               <h3 className="font-semibold text-ants-ink mb-1">{paso.titulo}</h3>
