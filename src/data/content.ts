@@ -13,6 +13,11 @@ export const contact = {
   whatsapp: "5491140784646", // formato internacional sin '+' ni espacios, para links wa.me
   whatsappDisplay: "+54 11 4078-4646",
   email: "masiokas@gmail.com",
+  // Destino de la notificacion del formulario de contacto (src/app/api/contact/route.ts).
+  // Resend esta en modo sandbox (sin dominio propio verificado) y solo permite enviar
+  // a la direccion duena de la cuenta. Cuando se verifique un dominio en resend.com/domains,
+  // cambiar esto de vuelta a `email` (o agregar ambas).
+  formNotificationEmail: "digital.ntea@gmail.com",
   calendlyUrl: "https://calendly.com/PENDIENTE", // reemplazar con el link real
 };
 

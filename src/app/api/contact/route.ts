@@ -23,14 +23,19 @@ export async function POST(request: Request) {
   const resend = new Resend(process.env.RESEND_API_KEY);
 
   try {
-    const result = await resend.emails.send({
+    const { error } = await resend.emails.send({
       from: "ANTS Web <onboarding@resend.dev>",
-      to: contact.email,
+      to: contact.formNotificationEmail,
       replyTo: email,
       subject: `Nuevo lead de ${nombre}`,
       text: `Nombre: ${nombre}\nEmail: ${email}\nWhatsApp: ${whatsapp}\n\nMensaje:\n${mensaje}`,
     });
-    console.log("DEBUG resend result:", JSON.stringify(result));
+    // El SDK de Resend no lanza excepcion en errores de la API (dominio no verificado,
+    // destinatario no permitido en modo sandbox, etc.) - los devuelve en `error`.
+    if (error) {
+      console.error("Resend rechazo el envio de contacto", error);
+      return NextResponse.json({ ok: false, error: "No se pudo enviar el mensaje" }, { status: 502 });
+    }
     return NextResponse.json({ ok: true });
   } catch (err) {
     console.error("Error enviando email de contacto", err);
