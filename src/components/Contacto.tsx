@@ -12,7 +12,8 @@ export default function Contacto() {
 
   async function handleSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
-    const form = new FormData(e.currentTarget);
+    const formEl = e.currentTarget;
+    const form = new FormData(formEl);
     const payload = {
       nombre: String(form.get("nombre") || ""),
       email: String(form.get("email") || ""),
@@ -37,7 +38,7 @@ export default function Contacto() {
       });
       if (!res.ok) throw new Error("request failed");
       setStatus("success");
-      e.currentTarget.reset();
+      formEl.reset();
     } catch {
       setStatus("error");
       setErrorMsg("No pudimos enviar tu mensaje. Escribinos directo por WhatsApp mientras lo resolvemos.");
