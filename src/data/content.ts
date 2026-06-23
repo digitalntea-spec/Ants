@@ -6,7 +6,7 @@ export const siteMeta = {
   title: "ANTS — Sistemas de venta inteligentes",
   description:
     "Creamos sistemas de venta inteligentes con tecnología IA, diseño profesional y psicología cognitiva.",
-  url: "https://ants.example.com", // reemplazar cuando el dominio esté conectado
+  url: "https://ants-landing.vercel.app", // reemplazar cuando el dominio propio esté conectado
 };
 
 export const contact = {

@@ -11,6 +11,7 @@ const graffiti = Luckiest_Guy({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL(siteMeta.url),
   title: siteMeta.title,
   description: siteMeta.description,
   openGraph: {
