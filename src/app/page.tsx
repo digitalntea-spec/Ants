@@ -1,5 +1,6 @@
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
+import StackTecnologico from "@/components/StackTecnologico";
 import Servicios from "@/components/Servicios";
 import ComoFunciona from "@/components/ComoFunciona";
 import SobreNosotros from "@/components/SobreNosotros";
@@ -14,6 +15,7 @@ export default function Home() {
       <Header />
       <main>
         <Hero />
+        <StackTecnologico />
         <Servicios />
         <ComoFunciona />
         <SobreNosotros />

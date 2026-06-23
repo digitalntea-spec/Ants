@@ -3,7 +3,13 @@ import Reveal from "./Reveal";
 
 const ICON_BG = ["bg-ants-lila", "bg-ants-menta", "bg-ants-lila", "bg-ants-menta"];
 
+const INICIALES_OVERRIDE: Record<string, string> = {
+  "Diseño Gráfico UBA": "DG",
+  "Coaching PNL Certificado": "CO",
+};
+
 function getInitials(titulo: string) {
+  if (INICIALES_OVERRIDE[titulo]) return INICIALES_OVERRIDE[titulo];
   return titulo
     .split(" ")
     .map((word) => word[0])
@@ -23,9 +29,9 @@ export default function Servicios() {
             <Reveal key={servicio.titulo} delay={i * 0.08}>
               <div className="rounded-2xl border border-ants-border bg-ants-surface p-6 hover:shadow-md transition-shadow">
                 <div
-                  className={`w-10 h-10 rounded-lg ${ICON_BG[i % ICON_BG.length]} flex items-center justify-center mb-4`}
+                  className={`w-14 h-14 rounded-lg ${ICON_BG[i % ICON_BG.length]} flex items-center justify-center mb-4`}
                 >
-                  <span className="font-graffiti text-ants-ink text-sm" style={{ letterSpacing: 1 }}>
+                  <span className="font-graffiti text-ants-ink text-xl" style={{ letterSpacing: 1 }}>
                     {getInitials(servicio.titulo)}
                   </span>
                 </div>
