@@ -8,6 +8,7 @@ import {
   siCalendly,
   siGoogleads,
   siMeta,
+  siN8n,
 } from "simple-icons";
 import Reveal from "./Reveal";
 
@@ -23,6 +24,7 @@ const STACK: StackItem[] = [
   { nombre: "Resend", icon: siResend },
   { nombre: "Tailwind CSS", icon: siTailwindcss },
   { nombre: "Framer Motion", icon: siFramer },
+  { nombre: "n8n", icon: siN8n },
   { nombre: "WhatsApp", icon: siWhatsapp },
   { nombre: "Calendly", icon: siCalendly },
   { nombre: "OpenAI", icon: null },
