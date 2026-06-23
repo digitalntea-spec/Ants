@@ -23,13 +23,14 @@ export async function POST(request: Request) {
   const resend = new Resend(process.env.RESEND_API_KEY);
 
   try {
-    await resend.emails.send({
+    const result = await resend.emails.send({
       from: "ANTS Web <onboarding@resend.dev>",
       to: contact.email,
       replyTo: email,
       subject: `Nuevo lead de ${nombre}`,
       text: `Nombre: ${nombre}\nEmail: ${email}\nWhatsApp: ${whatsapp}\n\nMensaje:\n${mensaje}`,
     });
+    console.log("DEBUG resend result:", JSON.stringify(result));
     return NextResponse.json({ ok: true });
   } catch (err) {
     console.error("Error enviando email de contacto", err);
