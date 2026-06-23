@@ -28,7 +28,12 @@ export default function Header() {
       }`}
     >
       <div className="max-w-6xl mx-auto flex items-center justify-between px-6 py-3">
-        <a href="#" className="flex items-center">
+        <a
+          href="#"
+          className={`flex items-center transition-opacity duration-300 ${
+            scrolled ? "opacity-100" : "opacity-0 pointer-events-none"
+          }`}
+        >
           <Logo size={112} showBadge={false} />
         </a>
 
