@@ -1,4 +1,5 @@
 import { servicios } from "@/data/content";
+import Reveal from "./Reveal";
 
 export default function Servicios() {
   return (
@@ -8,15 +9,14 @@ export default function Servicios() {
           Lo que hacemos
         </h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
-          {servicios.map((servicio) => (
-            <div
-              key={servicio.titulo}
-              className="rounded-2xl border border-ants-border bg-ants-surface p-6 hover:shadow-md transition-shadow"
-            >
-              <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-ants-lila to-ants-menta mb-4" />
-              <h3 className="font-semibold text-ants-ink mb-2">{servicio.titulo}</h3>
-              <p className="text-sm text-ants-ink-muted">{servicio.descripcion}</p>
-            </div>
+          {servicios.map((servicio, i) => (
+            <Reveal key={servicio.titulo} delay={i * 0.08}>
+              <div className="rounded-2xl border border-ants-border bg-ants-surface p-6 hover:shadow-md transition-shadow">
+                <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-ants-lila to-ants-menta mb-4" />
+                <h3 className="font-semibold text-ants-ink mb-2">{servicio.titulo}</h3>
+                <p className="text-sm text-ants-ink-muted">{servicio.descripcion}</p>
+              </div>
+            </Reveal>
           ))}
         </div>
       </div>
