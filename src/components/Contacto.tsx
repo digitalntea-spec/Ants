@@ -50,13 +50,7 @@ export default function Contacto() {
         <h2 className="text-2xl md:text-3xl font-bold text-center text-ants-ink mb-12">
           Agendá tu diagnóstico
         </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
-          <iframe
-            title="Calendly"
-            src={contact.calendlyUrl}
-            className="w-full h-[480px] rounded-2xl border border-ants-border"
-          />
-
+        <div className="max-w-xl mx-auto">
           <form onSubmit={handleSubmit} className="space-y-3">
             <input
               type="text"
