@@ -29,7 +29,7 @@ export default function Header() {
     >
       <div className="max-w-6xl mx-auto flex items-center justify-between px-6 py-3">
         <a href="#" className="flex items-center">
-          <Logo size={56} showBadge={false} />
+          <Logo size={112} showBadge={false} />
         </a>
 
         <nav className="hidden md:flex items-center gap-6 text-sm font-medium text-ants-ink-muted">
