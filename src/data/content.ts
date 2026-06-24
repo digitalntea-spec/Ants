@@ -37,10 +37,10 @@ export type Servicio = {
 
 export const servicios: Servicio[] = [
   { titulo: "Landing Pages", descripcion: "Diseño y copy orientado a conversión, no solo a estética." },
+  { titulo: "Marketing Digital", descripcion: "Campañas de performance en Meta Ads y Google Ads orientadas a resultados reales." },
   { titulo: "Automatización IA", descripcion: "Flujos que capturan y nutren leads mientras vos no estás." },
   { titulo: "Diseño Gráfico UBA", descripcion: "Identidad visual con respaldo académico y mirada estratégica." },
   { titulo: "Coaching y PNL", descripcion: "Herramientas de venta y liderazgo basadas en psicología cognitiva." },
-  { titulo: "Marketing Digital", descripcion: "Campañas de performance en Meta Ads y Google Ads orientadas a resultados reales." },
 ];
 
 export type Paso = {
