@@ -27,7 +27,7 @@ export const hero = {
   subheadline:
     "Landing pages, automatización IA, diseño gráfico UBA y coaching PNL certificado — todo coordinado para convertir como una colonia de hormigas.",
   ctaPrimary: "Agenda tu diagnóstico gratis",
-  ctaSecondary: "Ver servicios",
+  ctaSecondary: "Ver soluciones",
 };
 
 export type Servicio = {
@@ -39,7 +39,8 @@ export const servicios: Servicio[] = [
   { titulo: "Landing Pages", descripcion: "Diseño y copy orientado a conversión, no solo a estética." },
   { titulo: "Automatización IA", descripcion: "Flujos que capturan y nutren leads mientras vos no estás." },
   { titulo: "Diseño Gráfico UBA", descripcion: "Identidad visual con respaldo académico y mirada estratégica." },
-  { titulo: "Coaching PNL Certificado", descripcion: "Herramientas de venta y liderazgo basadas en psicología cognitiva." },
+  { titulo: "Coaching y PNL", descripcion: "Herramientas de venta y liderazgo basadas en psicología cognitiva." },
+  { titulo: "Marketing Digital", descripcion: "Campañas de performance en Meta Ads y Google Ads orientadas a resultados reales." },
 ];
 
 export type Paso = {

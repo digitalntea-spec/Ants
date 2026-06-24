@@ -19,6 +19,15 @@ const config: Config = {
         graffiti: ["var(--font-graffiti)", "cursive"],
         sans: ["var(--font-sans)", "system-ui", "sans-serif"],
       },
+      animation: {
+        marquee: "marquee 30s linear infinite",
+      },
+      keyframes: {
+        marquee: {
+          from: { transform: "translateX(0)" },
+          to: { transform: "translateX(-50%)" },
+        },
+      },
     },
   },
   plugins: [],
